@@ -9,12 +9,15 @@ def encode():
         encoded_pass += str(new_digit)
     return encoded_pass
 
-def decoder(user_input):
-    temp = ""
-    for i in user_input:
-        temp += str(int(i) - 3)
-    return temp
-
+def decode():
+    global decoded_pass
+    decoded_pass = ""
+    for i in encoded_pass:
+        new_digit = int(i) - 3
+        if new_digit < 0:
+            new_digit += 10
+        decoded_pass += str(new_digit)
+    return decoded_pass
 
 def main():
 
