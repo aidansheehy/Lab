@@ -9,6 +9,12 @@ def encode():
         encoded_pass += str(new_digit)
     return encoded_pass
 
+def decoder(user_input):
+    temp = ""
+    for i in user_input:
+        temp += str(int(i) - 3)
+    return temp
+
 
 def main():
 
